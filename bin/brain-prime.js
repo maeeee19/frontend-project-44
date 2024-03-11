@@ -1,3 +1,3 @@
-import { fifthPlay } from "../src/game5prime.js";
+import { fifthPlay } from "../src/games/game5prime.js";
 
 fifthPlay();

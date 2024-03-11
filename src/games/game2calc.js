@@ -1,12 +1,13 @@
-import runGame from "./index.js";
+import runGame from "../index.js";
+import { random } from "../helper.js";
 
 const gameDescription = 'What is the result of the expression?';
 
 export const generateQuestionAndAnswer = () => {
     const operations = ['+', '-', '*'];
 
-    const num1 = Math.floor(Math.random() * 100) + 1;
-    const num2 = Math.floor(Math.random() * 100) + 1;
+    const num1 = random();
+    const num2 = random();
 
     const operationNumber = Math.floor(Math.random() * 3);
 

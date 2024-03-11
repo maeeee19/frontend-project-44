@@ -1,9 +1,10 @@
-import runGame from "./index.js";
+import runGame from "../index.js";
+import { random } from "../helper.js";
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 export const generateQuestionAndAnswer = () => {
-    let num = Math.floor(Math.random() * 100) + 1;
+    let num = random();
     
     const question = `${num}`;
 

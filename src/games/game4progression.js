@@ -1,10 +1,11 @@
-import runGame from "./index.js";
+import runGame from "../index.js";
+import { random } from "../helper.js";
 
 const gameDescription = 'What number is missing in the progression?';
 
 export const generateQuestionAndAnswer = () => {
 
-    let start = Math.floor(Math.random() * 100) + 1;
+    let start = random();
     let diff = Math.floor(Math.random() * 5) + 1;
     let length = Math.floor(Math.random() * 6) + 5;
 

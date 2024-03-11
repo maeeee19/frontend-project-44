@@ -1,3 +1,3 @@
-import { secondPlay } from "../src/game2calc.js";
+import { secondPlay } from "../src/games/game2calc.js";
 
 secondPlay();

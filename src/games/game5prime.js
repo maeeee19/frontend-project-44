@@ -27,6 +27,8 @@ export const generateQuestionAndAnswer = () => {
     return { question, correctAnswer: correctAnswer.toString() };
 };
 
-export function fifthPlay () {
+function fifthPlay () {
     runGame(gameDescription, generateQuestionAndAnswer);
-};
+}
+
+export default fifthPlay;

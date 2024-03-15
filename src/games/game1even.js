@@ -19,6 +19,8 @@ export const generateQuestionAndAnswer = () => {
     return { question, correctAnswer };
 };
 
-export function firstPlay () {
+function firstPlay () {
     runGame(gameDescription, generateQuestionAndAnswer);
-};
+}
+
+export default firstPlay;

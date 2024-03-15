@@ -25,6 +25,8 @@ export const generateQuestionAndAnswer = () => {
     return { question, correctAnswer: correctAnswer.toString() };
 };
 
-export function thirdPlay () {
+function thirdPlay () {
     runGame(gameDescription, generateQuestionAndAnswer);
-};
+}
+
+export default thirdPlay;

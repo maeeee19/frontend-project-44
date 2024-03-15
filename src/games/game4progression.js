@@ -36,6 +36,8 @@ export const generateQuestionAndAnswer = () => {
     return { question, correctAnswer: correctAnswer.toString() };
 };
 
-export function fourthPlay () {
+function fourthPlay () {
     runGame(gameDescription, generateQuestionAndAnswer);
-};
+}
+
+export default fourthPlay;

@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { fifthPlay } from "../src/games/game5prime.js";
+import fifthPlay from "../src/games/game5prime.js";
 
 fifthPlay();

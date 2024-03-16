@@ -17,12 +17,12 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime.js"
   },
-  "dependencies": {
-    "readline-sync": "github:anseki/readline-sync"
-  },
   "devDependencies": {
     "eslint": "^8.53.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.0"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }

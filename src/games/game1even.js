@@ -1,11 +1,11 @@
-import runGame from "../index.js";
-import { random } from "../helper.js";
+import runGame from '../index.js';
+import { random } from '../helper.js';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 export const generateQuestionAndAnswer = () => {
-    let num = random();
-    
+    const num = random();
+
     const question = `${num}`;
 
     let correctAnswer;
@@ -19,7 +19,7 @@ export const generateQuestionAndAnswer = () => {
     return { question, correctAnswer };
 };
 
-function firstPlay () {
+function firstPlay() {
     runGame(gameDescription, generateQuestionAndAnswer);
 }
 

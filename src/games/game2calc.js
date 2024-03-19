@@ -1,5 +1,5 @@
-import runGame from "../index.js";
-import { random } from "../helper.js";
+import runGame from '../index.js';
+import { random } from '../helper.js';
 
 const gameDescription = 'What is the result of the expression?';
 
@@ -25,7 +25,7 @@ export const generateQuestionAndAnswer = () => {
     return { question, correctAnswer: correctAnswer.toString() };
 };
 
-function secondPlay () {
+function secondPlay() {
     runGame(gameDescription, generateQuestionAndAnswer);
 }
 

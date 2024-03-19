@@ -12,6 +12,9 @@ parserOptions:
   ecmaVersion: latest
 
 rules: 
+  {
+    "indent": ["error", 2]
+}
   no-console: 0
   import/extensions:
     - error

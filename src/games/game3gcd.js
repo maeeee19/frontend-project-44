@@ -1,5 +1,5 @@
-import runGame from "../index.js";
-import { random } from "../helper.js";
+import runGame from '../index.js';
+import { random } from '../helper.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
@@ -10,22 +10,20 @@ export const generateQuestionAndAnswer = () => {
 
     const question = `${num1} ${num2}`;
 
-    let correctAnswer;
-
-    while (num1 != 0 & num2 != 0) {
+    while (num1 !== 0 && num2 !== 0) {
         if (num1 > num2) {
-            num1 = num1 % num2;
+            num1 %= num2;
         } else {
-            num2 = num2 % num1;
+            num2 %= num1;
         }
     }
-    
-    correctAnswer = num1 + num2;
+
+    const correctAnswer = num1 + num2;
 
     return { question, correctAnswer: correctAnswer.toString() };
 };
 
-function thirdPlay () {
+function thirdPlay() {
     runGame(gameDescription, generateQuestionAndAnswer);
 }
 

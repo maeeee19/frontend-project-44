@@ -15,14 +15,13 @@ const runGame = (gameDescription, gameLogic) => {
         const usersAnswer = readlineSync.question('You answer:');
 
         if (usersAnswer === correctAnswer) {
-            console.log('Correct!')
+            console.log('Correct!');
             correctAnswerCount += 1;
         } else {
             console.log(`${usersAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
             console.log(`Let's try again, ${name}!`);
             return;
         }
-
     }
     console.log(`Congratulations, ${name}!`);
 };

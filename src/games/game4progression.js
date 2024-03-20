@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import { random } from '../helper.js';
+import random from '../helper.js';
 
 const gameDescription = 'What number is missing in the progression?';
 

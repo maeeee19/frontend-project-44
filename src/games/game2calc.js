@@ -16,11 +16,11 @@ export const generateQuestionAndAnswer = () => {
     let correctAnswer;
 
     if (operations[operationNumber] === '+') {
-    correctAnswer = num1 + num2;
+        correctAnswer = num1 + num2;
     } else if (operations[operationNumber] === '-') {
-    correctAnswer = num1 - num2;
+        correctAnswer = num1 - num2;
     } else if (operations[operationNumber] === '*') {
-    correctAnswer = num1 * num2;
+        correctAnswer = num1 * num2;
     }
     return { question, correctAnswer: correctAnswer.toString() };
 };

@@ -10,11 +10,11 @@ export const generateQuestionAndAnswer = () => {
 
 	let correctAnswer;
 
-    if (num % 2 !== 0) {
-        correctAnswer = 'no';
-    } else {
-			correctAnswer = 'yes';
-    }
+	if (num % 2 !== 0) {
+		correctAnswer = 'no';
+	} else {
+		correctAnswer = 'yes';
+	}
 
 	return { question, correctAnswer };
 };

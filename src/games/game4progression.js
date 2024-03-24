@@ -4,7 +4,6 @@ import random from '../helper.js';
 const gameDescription = 'What number is missing in the progression?';
 
 export const generateQuestionAndAnswer = () => {
-
     const start = random();
     const diff = Math.floor(Math.random() * 5) + 1;
     const length = Math.floor(Math.random() * 6) + 5;

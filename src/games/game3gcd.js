@@ -4,7 +4,6 @@ import random from '../helper.js';
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 export const generateQuestionAndAnswer = () => {
-
     let num1 = random();
     let num2 = random();
 

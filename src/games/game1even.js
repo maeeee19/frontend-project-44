@@ -13,7 +13,7 @@ export const generateQuestionAndAnswer = () => {
     if (num % 2 !== 0) {
         correctAnswer = 'no';
     } else {
-		correctAnswer = 'yes';
+			correctAnswer = 'yes';
     }
 
 	return { question, correctAnswer };

@@ -1,33 +1,34 @@
-import random from '../helper.js';
-import runGame from '../index.js';
+import random from "../helper.js";
+import runGame from "../index.js";
 
-const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameDescription =
+  'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 export const generateQuestionAndAnswer = () => {
-    const num = random();
+  const num = random();
 
-    const question = `${num}`;
+  const question = `${num}`;
 
-    let correctAnswer;
+  let correctAnswer;
 
-    const isPrime = () => {
-        for (let i = 2; i < num; i += 1) {
-            if (num % i === 0) return false;
-        }
-        return num !== 1;
-    };
-
-    if (isPrime(num) === true) {
-        correctAnswer = 'yes';
-    } else {
-        correctAnswer = 'no';
+  const isPrime = () => {
+    for (let i = 2; i < num; i += 1) {
+      if (num % i === 0) return false;
     }
+    return num !== 1;
+  };
 
-    return { question, correctAnswer: correctAnswer.toString() };
+  if (isPrime(num) === true) {
+    correctAnswer = "yes";
+  } else {
+    correctAnswer = "no";
+  }
+
+  return { question, correctAnswer: correctAnswer.toString() };
 };
 
 function fifthPlay() {
-    runGame(gameDescription, generateQuestionAndAnswer);
+  runGame(gameDescription, generateQuestionAndAnswer);
 }
 
 export default fifthPlay;

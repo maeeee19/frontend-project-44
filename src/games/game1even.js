@@ -1,26 +1,27 @@
-import runGame from '../index.js';
-import random from '../helper.js';
+import runGame from "../index.js";
+import random from "../helper.js";
 
-const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameDescription =
+  'Answer "yes" if the number is even, otherwise answer "no".';
 
 export const generateQuestionAndAnswer = () => {
-	const num = random();
+  const num = random();
 
-	const question = `${num}`;
+  const question = `${num}`;
 
-	let correctAnswer;
+  let correctAnswer;
 
-	if (num % 2 !== 0) {
-		correctAnswer = 'no';
-	} else {
-		correctAnswer = 'yes';
-	}
+  if (num % 2 !== 0) {
+    correctAnswer = "no";
+  } else {
+    correctAnswer = "yes";
+  }
 
-	return { question, correctAnswer };
+  return { question, correctAnswer };
 };
 
 function firstPlay() {
-	runGame(gameDescription, generateQuestionAndAnswer);
+  runGame(gameDescription, generateQuestionAndAnswer);
 }
 
 export default firstPlay;

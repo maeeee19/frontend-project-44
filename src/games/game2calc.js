@@ -4,7 +4,7 @@ import random from '../helper.js';
 const gameDescription = 'What is the result of the expression?';
 
 export const generateQuestionAndAnswer = () => {
-  const operations = ["+", "-", "*"];
+  const operations = ['+', '-', '*'];
 
   const num1 = random();
   const num2 = random();

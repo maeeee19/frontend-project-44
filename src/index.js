@@ -1,9 +1,9 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 const runGame = (gameDescription, gameLogic) => {
-  console.log("brain-games");
-  console.log("Welcome to the Brain Games!");
-  const name = readlineSync.question("May I have your name?: ");
+  console.log('brain-games');
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!\n${gameDescription}`);
 
   const winCount = 3;
@@ -12,15 +12,13 @@ const runGame = (gameDescription, gameLogic) => {
   while (correctAnswerCount < winCount) {
     const { question, correctAnswer } = gameLogic();
     console.log(`Question: ${question}`);
-    const usersAnswer = readlineSync.question("You answer:");
+    const usersAnswer = readlineSync.question('You answer:');
 
     if (usersAnswer === correctAnswer) {
-      console.log("Correct!");
+      console.log('Correct!');
       correctAnswerCount += 1;
     } else {
-      console.log(
-        `${usersAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}`
-      );
+      console.log(`${usersAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
       console.log(`Let's try again, ${name}!`);
       return;
     }

@@ -1,7 +1,7 @@
-import runGame from "../index.js";
-import random from "../helper.js";
+import runGame from '../index.js';
+import random from '../helper.js';
 
-const gameDescription = "What is the result of the expression?";
+const gameDescription = 'What is the result of the expression?';
 
 export const generateQuestionAndAnswer = () => {
   const operations = ["+", "-", "*"];
@@ -15,11 +15,11 @@ export const generateQuestionAndAnswer = () => {
 
   let correctAnswer;
 
-  if (operations[operationNumber] === "+") {
+  if (operations[operationNumber] === '+') {
     correctAnswer = num1 + num2;
-  } else if (operations[operationNumber] === "-") {
+  } else if (operations[operationNumber] === '-') {
     correctAnswer = num1 - num2;
-  } else if (operations[operationNumber] === "*") {
+  } else if (operations[operationNumber] === '*') {
     correctAnswer = num1 * num2;
   }
   return { question, correctAnswer: correctAnswer.toString() };

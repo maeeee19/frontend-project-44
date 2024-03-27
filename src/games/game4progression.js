@@ -1,7 +1,7 @@
-import runGame from "../index.js";
-import random from "../helper.js";
+import runGame from '../index.js';
+import random from '../helper.js';
 
-const gameDescription = "What number is missing in the progression?";
+const gameDescription = 'What number is missing in the progression?';
 
 export const generateQuestionAndAnswer = () => {
   const start = random();
@@ -18,8 +18,8 @@ export const generateQuestionAndAnswer = () => {
 
   const emtyElement = (progression, emtyElementIndex) => {
     const progressionWithEmtyElement = progression.slice();
-    progressionWithEmtyElement[emtyElementIndex] = "..";
-    return progressionWithEmtyElement.join(" ");
+    progressionWithEmtyElement[emtyElementIndex] = '..';
+    return progressionWithEmtyElement.join(' ');
   };
 
   const progression = generateProgression(start, diff, length);

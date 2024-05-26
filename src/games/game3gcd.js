@@ -3,20 +3,22 @@ import random from '../helper.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 const gcd = (num1, num2) => {
-  while (num1 !== 0 && num2 !== 0) {
-    if (num1 > num2) {
-      num1 %= num2;
+  let temp1 = num1;
+  let temp2 = num2;
+  while (temp1 !== 0 && temp2 !== 0) {
+    if (temp1 > temp2) {
+      temp1 %= temp2;
     } else {
-      num2 %= num1;
+      temp2 %= temp1;
     }
   }
 
-  return num1 + num2;
+  return temp1 + temp2;
 };
 
 export const generateQuestionAndAnswer = () => {
-  let num1 = random();
-  let num2 = random();
+  const num1 = random();
+  const num2 = random();
 
   const question = `${num1} ${num2}`;
 

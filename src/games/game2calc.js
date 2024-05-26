@@ -2,10 +2,20 @@ import runGame from '../index.js';
 import random from '../helper.js';
 
 const gameDescription = 'What is the result of the expression?';
+const operations = ['+', '-', '*'];
+
+const calculateResult = (num1, num2, operation) => {
+  switch (operation) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+  }
+};
 
 export const generateQuestionAndAnswer = () => {
-  const operations = ['+', '-', '*'];
-
   const num1 = random();
   const num2 = random();
 
@@ -13,15 +23,8 @@ export const generateQuestionAndAnswer = () => {
 
   const question = `${num1} ${operations[operationNumber]} ${num2}`;
 
-  let correctAnswer;
+  const correctAnswer = calculateResult(num1, num2, operations[operationNumber]);
 
-  if (operations[operationNumber] === '+') {
-    correctAnswer = num1 + num2;
-  } else if (operations[operationNumber] === '-') {
-    correctAnswer = num1 - num2;
-  } else if (operations[operationNumber] === '*') {
-    correctAnswer = num1 * num2;
-  }
   return { question, correctAnswer: correctAnswer.toString() };
 };
 
